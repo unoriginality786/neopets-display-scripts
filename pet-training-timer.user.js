@@ -9,6 +9,13 @@
 // ==/UserScript==
 
 (async () => {
+
+    // Check if the current window is the top-level window
+    if (window !== window.top) {
+        console.log('Script is running inside an iframe, exiting...');
+        return;
+    }
+
     const TYPES = { PIRATE: 'pirate', MYSTERY: 'mystery', NINJA: 'ninja' };
     /** ======== v CUSTOMIZATION OPTIONS BELOW v ============**/
     //  If you only want some school to appear in your report, remove the undesired ones from below:  
